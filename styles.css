@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	background-color: #333;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.cursorNone {
+	cursor: none;
+}
+
+#start {
+	background-color: rgba(14, 218, 55, 0.628);
+	border: none;
+	color: #fff;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	font-size: 32px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+#start:hover {
+	background-color: rgba(14, 218, 55, 0.865)
+}
+
+.paddle {
+	--position: 50;
+
+	position: absolute;
+	background-color: rgba(14, 218, 55, 0.849);
+	top: calc(var(--position) * 1vh);
+	transform: translateY(-50%);
+	width: 1vh;
+	height: 10vh;
+}
+
+.paddle.right {
+	right: 1vw;
+}
+
+.paddle.left {
+	left: 1vw;
+}
+
+.ball {
+	--x: 50;
+	--y: 50;
+
+	position: absolute;
+	background-color: rgba(14, 218, 55, 0.852);
+	left: calc(var(--x) * 1vw);
+	top: calc(var(--y) * 1vh);
+	transform: translate(-50%, -50%);
+	width: 2.5vh;
+	height: 2.5vh;
+	border-radius: 50%;
+}
+
+.score {
+	margin: 0 0 85vh 0;
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+	font-size: 7vh;
+	color: rgba(14, 218, 54, 0.564);
+}
+
+.score>* {
+	padding: 0 2.5vh;
+	margin: 1vh 0;
+	opacity: 0.5;
+}
+
+.line-score {
+	border-left: 0.5vw solid rgba(14, 218, 54, 0.564);
+	height: 8vh;
+	position: absolute;
+	left: 49.75vw;
+}
