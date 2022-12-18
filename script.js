@@ -61,7 +61,7 @@ startAppBtn.onclick = function () {
 		playerPaddle.reset()
 	}
 
-	document.addEventListener('mousemove', e => {
+	document.addEventListener('pointermove', e => {
 		playerPaddle.position = (e.y / window.innerHeight) * 100
 	})
 
